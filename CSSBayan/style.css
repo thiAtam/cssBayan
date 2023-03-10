@@ -1,0 +1,33 @@
+body {
+    background-color: blanchedalmond;
+}
+.accordeon {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 1080px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+    border: solid;
+    border-style: dashed;
+}
+
+.accordeon__title {
+    padding: 10px 40px 10px 20px;
+    cursor: pointer;
+    outline: none;
+    width: 320px;
+    border: solid;
+    border-style: dashed;
+    transition: all 2s;
+}
+
+.img__test {
+    transition: all 2s;
+}
