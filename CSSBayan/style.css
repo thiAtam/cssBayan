@@ -1,33 +1,68 @@
-body {
-    background-color: blanchedalmond;
-}
-.accordeon {
-    width: 100%;
+* {
+    box-sizing: border-box;
     margin: 0 auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background: blanchedalmond;
+}
+
+.accordion {
+    width: 100%;
 }
 
 .wrapper {
     width: 1080px;
+}
+
+.accordion__list {
+    margin: 60px auto;
+    width: 50%;
+}
+
+.accordion__list li {
+    border: 1px solid;
+    list-style: none;
+    width: 100%;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.30),
+                -6px, -6px, 10px -1px rgba(255, 255, 255, 0.20);
+}
+
+.accordion__list li label {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    min-height: 100vh;
-    border: solid;
-    border-style: dashed;
-}
-
-.accordeon__title {
-    padding: 10px 40px 10px 20px;
+    padding: 20px;
+    font-size: 18px;
     cursor: pointer;
-    outline: none;
-    width: 320px;
-    border: solid;
-    border-style: dashed;
-    transition: all 2s;
 }
 
-.img__test {
-    transition: all 2s;
+label::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+.accordion__list .content__part {
+    color: aqua;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s, padding 1s;
+}
+
+.accordion__list input[type='radio']:checked + label + .content__part {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+.accordion__list input[type='radio']:checked + label::before {
+    content: '-';
 }
