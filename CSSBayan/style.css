@@ -59,7 +59,7 @@ input[type='radio'] {
     padding: 0 0.7em;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 2s, padding 2s;
+    transition: max-height 1s, padding 1s;
 }
 
 label .block_test {
