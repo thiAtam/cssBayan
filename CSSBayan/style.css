@@ -59,8 +59,10 @@ input[type='radio'] {
     padding: 0 0.7em;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1s, padding 1s;
+    transform: scale(0);
+    transition: max-height 1s, padding 1s, transform 1s;
 }
+
 
 label .block_test {
     width: 100%;
@@ -68,10 +70,6 @@ label .block_test {
     justify-content: space-between;
     align-items:center;
     margin-bottom: 2em;
-}
-
-label .content__part {
-    break-after: always;
 }
 
 .content__part img {
@@ -91,12 +89,14 @@ span {
 
 .accordion__list input[type='radio']:checked + label .content__part {
     max-height: 100%;
+    transform: scale(1);
 }
 
 /*TEST*/
 .accordion__list input[type='radio']:hover + label .content__part {
     max-height: 100%;
     padding: 0.6em 0 1.2em;
+    transform: scale(1);
 }
 
 .accordion__list input[type='radio']:hover + label  {
@@ -220,5 +220,58 @@ span {
     .accordion__list {
         width: 80%;
         padding-left: 0;
+    }
+}
+
+@media (hover: hover) {
+    .test:hover + label .plus {
+        width: 0;
+        transition: width 1s;
+    }
+    
+    .test:hover + label .minus {
+        width: 6%;
+        transition: width 1s;
+    }
+
+    .accordion__list input[type='radio']:hover + label .content__part {
+        max-height: 100%;
+        padding: 0.6em 0 1.2em;
+        transform: scale(1);
+    }
+
+    .accordion__list:hover input[type='radio'] + label {
+        color: red;
+        transition: color 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label {
+        color: black;
+        transition: color 1s;
+    }
+    
+    .accordion__list:hover input[type='radio'] + label .plus {
+        width: 6%;
+        transition: width 1s;
+    }
+    
+    .accordion__list input[type='radio']:checked + label .minus {
+        width: 0;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label .minus {
+        width: 6%;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:hover + label .plus {
+        width: 0;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label .plus {
+        width: 0;
+        transition: width 1s;
     }
 }
