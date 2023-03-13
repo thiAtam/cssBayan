@@ -1,0 +1,45 @@
+.test:hover + label .plus {
+    width: 0;
+    transition: width 1s;
+}
+
+.test:hover + label .minus {
+    width: 6%;
+    transition: width 1s;
+}
+
+.accordion__list:hover input[type='radio'] + label {
+    color: red;
+    transition: color 1s;
+}
+
+.accordion__list:hover input[type='radio']:checked + label {
+    color: black;
+    transition: color 1s;
+}
+
+.accordion__list:hover input[type='radio'] + label .plus {
+    width: 6%;
+    transition: width 1s;
+}
+
+.accordion__list:hover input[type='radio']:checked + label .minus {
+    width: 6%;
+    transition: width 1s;
+}
+
+.accordion__list:hover input[type='radio']:hover + label .plus {
+    width: 0;
+    transition: width 1s;
+}
+
+.accordion__list:hover input[type='radio']:checked + label .plus {
+    width: 0;
+    transition: width 1s;
+}
+
+.accordion__list input[type='radio']:hover + label .content__part {
+    max-height: 100%;
+    padding: 0.6em 0 1.2em;
+    transform: scale(1);
+}

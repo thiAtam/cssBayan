@@ -108,10 +108,10 @@ span {
 }
 
 /*TEST*/
-
+/*
 .accordion__list input[type='radio']:hover + label  {
     content: '-';;
-}
+}*/
 
 .plus {
     width: 0;
@@ -137,7 +137,11 @@ span {
     transition: width 1s;
 }
 
-@media screen and (min-width: 1820px) {
+.accordion__list input[type='radio'] + label .plus {
+    transition: all 1s;
+}
+
+@media (hover: hover) {
     .accordion__list input[type='radio']:checked + label .content__part {
         max-height: 100%;
         transform: scale(1);
@@ -149,10 +153,10 @@ span {
         padding: 0.6em 0 1.2em;
         transform: scale(1);
     }
-    
+    /*
     .accordion__list input[type='radio']:hover + label  {
         content: '-';;
-    }
+    }*/
     
     .plus {
         width: 0;
