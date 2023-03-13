@@ -275,3 +275,23 @@ span {
         transition: width 1s;
     }
 }
+
+@media (hover: none) {
+    .accordion__list input[type='radio']:checked + label .minus {
+        width: 0;
+        transition: width 1s;
+    }
+
+    .test:checked + label .plus {
+        width: 0%;
+    }
+    
+    .test:checked + label .minus {
+        width: 6%;
+    }
+
+    .accordion__list input[type='radio']:checked + label .content__part {
+        max-height: 100%;
+        transform: scale(1);
+    }
+}
