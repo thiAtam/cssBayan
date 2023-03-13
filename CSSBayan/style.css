@@ -85,6 +85,21 @@ span {
     width: 50%;
 }
 
+.accordion__list:hover input[type='radio']:checked + label .minus {
+    width: 6%;
+    transition: width 1s;
+}
+
+.accordion__list:hover input[type='radio']:checked + label .plus {
+    width: 0;
+    transition: width 1s;
+}
+
+.accordion__list:hover input[type='radio'] + label .plus {
+    width: 6%;
+    transition: width 1s;
+}
+
 /*TEST*/
 
 .accordion__list input[type='radio']:checked + label .content__part {
@@ -93,11 +108,6 @@ span {
 }
 
 /*TEST*/
-.accordion__list input[type='radio']:hover + label .content__part {
-    max-height: 100%;
-    padding: 0.6em 0 1.2em;
-    transform: scale(1);
-}
 
 .accordion__list input[type='radio']:hover + label  {
     content: '-';;
@@ -121,51 +131,92 @@ span {
     width: 6%;
 }
 
-.test:hover + label .plus {
-    width: 0;
-    transition: width 1s;
-}
-
-.test:hover + label .minus {
-    width: 6%;
-    transition: width 1s;
-}
-
-.accordion__list:hover input[type='radio'] + label {
-    color: red;
-    transition: color 1s;
-}
-
-.accordion__list:hover input[type='radio']:checked + label {
-    color: black;
-    transition: color 1s;
-}
-
-.accordion__list:hover input[type='radio'] + label .plus {
-    width: 6%;
-    transition: width 1s;
-}
 
 .accordion__list input[type='radio']:checked + label .minus {
     width: 0;
     transition: width 1s;
 }
 
-.accordion__list:hover input[type='radio']:checked + label .minus {
-    width: 6%;
-    transition: width 1s;
+@media screen and (min-width: 1820px) {
+    .accordion__list input[type='radio']:checked + label .content__part {
+        max-height: 100%;
+        transform: scale(1);
+    }
+    
+    /*TEST*/
+    .accordion__list input[type='radio']:hover + label .content__part {
+        max-height: 100%;
+        padding: 0.6em 0 1.2em;
+        transform: scale(1);
+    }
+    
+    .accordion__list input[type='radio']:hover + label  {
+        content: '-';;
+    }
+    
+    .plus {
+        width: 0;
+        
+    }
+    
+    .minus {
+        width: 0;
+    }
+    
+    
+    .test:checked + label .plus {
+        width: 0%;
+    }
+    
+    .test:checked + label .minus {
+        width: 6%;
+    }
+    
+    .test:hover + label .plus {
+        width: 0;
+        transition: width 1s;
+    }
+    
+    .test:hover + label .minus {
+        width: 6%;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio'] + label {
+        color: red;
+        transition: color 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label {
+        color: black;
+        transition: color 1s;
+    }
+    
+    .accordion__list:hover input[type='radio'] + label .plus {
+        width: 6%;
+        transition: width 1s;
+    }
+    
+    .accordion__list input[type='radio']:checked + label .minus {
+        width: 0;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label .minus {
+        width: 6%;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:hover + label .plus {
+        width: 0;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label .plus {
+        width: 0;
+        transition: width 1s;
 }
-
-.accordion__list:hover input[type='radio']:hover + label .plus {
-    width: 0;
-    transition: width 1s;
 }
-
-.accordion__list:hover input[type='radio']:checked + label .plus {
-    width: 0;
-    transition: width 1s;
-}
-
 
 @media screen and (max-width: 1820px) and (min-width: 821px) {
     .wrapper {
@@ -183,6 +234,85 @@ span {
 
     .accordion__list li label {
         font-size: 1rem;
+    }
+
+    .accordion__list input[type='radio']:checked + label .content__part {
+        max-height: 100%;
+        transform: scale(1);
+    }
+    
+    /*TEST*/
+    .accordion__list input[type='radio']:hover + label .content__part {
+        max-height: 100%;
+        padding: 0.6em 0 1.2em;
+        transform: scale(1);
+    }
+    
+    .accordion__list input[type='radio']:hover + label  {
+        content: '-';;
+    }
+    
+    .plus {
+        width: 0;
+        
+    }
+    
+    .minus {
+        width: 0;
+    }
+    
+    
+    .test:checked + label .plus {
+        width: 0%;
+    }
+    
+    .test:checked + label .minus {
+        width: 6%;
+    }
+    
+    .test:hover + label .plus {
+        width: 0;
+        transition: width 1s;
+    }
+    
+    .test:hover + label .minus {
+        width: 6%;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio'] + label {
+        color: red;
+        transition: color 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label {
+        color: black;
+        transition: color 1s;
+    }
+    
+    .accordion__list:hover input[type='radio'] + label .plus {
+        width: 6%;
+        transition: width 1s;
+    }
+    
+    .accordion__list input[type='radio']:checked + label .minus {
+        width: 0;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label .minus {
+        width: 6%;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:hover + label .plus {
+        width: 0;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label .plus {
+        width: 0;
+        transition: width 1s;
     }
 }
 @media screen and (max-width: 820px) and (min-width: 400px) {
@@ -220,78 +350,5 @@ span {
     .accordion__list {
         width: 80%;
         padding-left: 0;
-    }
-}
-
-@media (hover: hover) {
-    .test:hover + label .plus {
-        width: 0;
-        transition: width 1s;
-    }
-    
-    .test:hover + label .minus {
-        width: 6%;
-        transition: width 1s;
-    }
-
-    .accordion__list input[type='radio']:hover + label .content__part {
-        max-height: 100%;
-        padding: 0.6em 0 1.2em;
-        transform: scale(1);
-    }
-
-    .accordion__list:hover input[type='radio'] + label {
-        color: red;
-        transition: color 1s;
-    }
-    
-    .accordion__list:hover input[type='radio']:checked + label {
-        color: black;
-        transition: color 1s;
-    }
-    
-    .accordion__list:hover input[type='radio'] + label .plus {
-        width: 6%;
-        transition: width 1s;
-    }
-    
-    .accordion__list input[type='radio']:checked + label .minus {
-        width: 0;
-        transition: width 1s;
-    }
-    
-    .accordion__list:hover input[type='radio']:checked + label .minus {
-        width: 6%;
-        transition: width 1s;
-    }
-    
-    .accordion__list:hover input[type='radio']:hover + label .plus {
-        width: 0;
-        transition: width 1s;
-    }
-    
-    .accordion__list:hover input[type='radio']:checked + label .plus {
-        width: 0;
-        transition: width 1s;
-    }
-}
-
-@media (hover: none) {
-    .accordion__list input[type='radio']:checked + label .minus {
-        width: 0;
-        transition: width 1s;
-    }
-
-    .test:checked + label .plus {
-        width: 0%;
-    }
-    
-    .test:checked + label .minus {
-        width: 6%;
-    }
-
-    .accordion__list input[type='radio']:checked + label .content__part {
-        max-height: 100%;
-        transform: scale(1);
     }
 }
