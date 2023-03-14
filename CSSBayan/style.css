@@ -141,6 +141,108 @@ span {
     transition: all 1s;
 }
 
+@media screen and (max-width: 1820px) and (min-width: 821px) {
+    .wrapper {
+        width: 70vw;
+    }
+
+    .accordion__list {
+        width: 70%;
+        padding-left: 0;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .accordion__list li label {
+        font-size: 1rem;
+    }
+
+    .accordion__list input[type='radio']:checked + label .content__part {
+        max-height: 100%;
+        transform: scale(1);
+    }
+    
+    /*TEST*/
+    
+    .plus {
+        width: 0;
+        
+    }
+    
+    .minus {
+        width: 0;
+    }
+    
+    
+    .test:checked + label .plus {
+        width: 0%;
+    }
+    
+    .test:checked + label .minus {
+        width: 6%;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label {
+        color: black;
+        transition: color 1s;
+    }
+    
+    .accordion__list input[type='radio']:checked + label .minus {
+        width: 0;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label .minus {
+        width: 6%;
+        transition: width 1s;
+    }
+    
+    .accordion__list:hover input[type='radio']:checked + label .plus {
+        width: 0;
+        transition: width 1s;
+    }
+}
+@media screen and (max-width: 820px) and (min-width: 400px) {
+    .wrapper {
+        width: 100vw;
+    }
+
+    .accordion__list {
+        width: 80%;
+        padding-left: 0;
+    }
+
+    .accordion__list li label {
+        font-size: 1.0rem;
+    }
+
+    h1 {
+        font-size: 2.0rem;
+    }
+}
+
+@media screen and (max-width: 400px) and (min-width: 200px) {
+    .wrapper {
+        width: 100vw;
+    }
+
+    .accordion__list li label {
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .accordion__list {
+        width: 80%;
+        padding-left: 0;
+    }
+}
+
+
 @media (hover: hover) {
     .accordion__list input[type='radio']:checked + label .content__part {
         max-height: 100%;
@@ -220,139 +322,4 @@ span {
         width: 0;
         transition: width 1s;
 }
-}
-
-@media screen and (max-width: 1820px) and (min-width: 821px) {
-    .wrapper {
-        width: 70vw;
-    }
-
-    .accordion__list {
-        width: 70%;
-        padding-left: 0;
-    }
-
-    h1 {
-        font-size: 2.8rem;
-    }
-
-    .accordion__list li label {
-        font-size: 1rem;
-    }
-
-    .accordion__list input[type='radio']:checked + label .content__part {
-        max-height: 100%;
-        transform: scale(1);
-    }
-    
-    /*TEST*/
-    .accordion__list input[type='radio']:hover + label .content__part {
-        max-height: 100%;
-        padding: 0.6em 0 1.2em;
-        transform: scale(1);
-    }
-    
-    .accordion__list input[type='radio']:hover + label  {
-        content: '-';;
-    }
-    
-    .plus {
-        width: 0;
-        
-    }
-    
-    .minus {
-        width: 0;
-    }
-    
-    
-    .test:checked + label .plus {
-        width: 0%;
-    }
-    
-    .test:checked + label .minus {
-        width: 6%;
-    }
-    
-    .test:hover + label .plus {
-        width: 0;
-        transition: width 1s;
-    }
-    
-    .test:hover + label .minus {
-        width: 6%;
-        transition: width 1s;
-    }
-    
-    .accordion__list:hover input[type='radio'] + label {
-        color: red;
-        transition: color 1s;
-    }
-    
-    .accordion__list:hover input[type='radio']:checked + label {
-        color: black;
-        transition: color 1s;
-    }
-    
-    .accordion__list:hover input[type='radio'] + label .plus {
-        width: 6%;
-        transition: width 1s;
-    }
-    
-    .accordion__list input[type='radio']:checked + label .minus {
-        width: 0;
-        transition: width 1s;
-    }
-    
-    .accordion__list:hover input[type='radio']:checked + label .minus {
-        width: 6%;
-        transition: width 1s;
-    }
-    
-    .accordion__list:hover input[type='radio']:hover + label .plus {
-        width: 0;
-        transition: width 1s;
-    }
-    
-    .accordion__list:hover input[type='radio']:checked + label .plus {
-        width: 0;
-        transition: width 1s;
-    }
-}
-@media screen and (max-width: 820px) and (min-width: 400px) {
-    .wrapper {
-        width: 100vw;
-    }
-
-    .accordion__list {
-        width: 80%;
-        padding-left: 0;
-    }
-
-    .accordion__list li label {
-        font-size: 1.0rem;
-    }
-
-    h1 {
-        font-size: 2.0rem;
-    }
-}
-
-@media screen and (max-width: 400px) and (min-width: 200px) {
-    .wrapper {
-        width: 100vw;
-    }
-
-    .accordion__list li label {
-        font-size: 0.8rem;
-    }
-
-    h1 {
-        font-size: 1.6rem;
-    }
-
-    .accordion__list {
-        width: 80%;
-        padding-left: 0;
-    }
 }
