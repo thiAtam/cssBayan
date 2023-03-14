@@ -184,21 +184,6 @@ span {
         width: 6%;
     }
     
-    .accordion__list:hover input[type='radio']:checked + label {
-        color: black;
-        transition: color 1s;
-    }
-    
-    .accordion__list input[type='radio']:checked + label .minus {
-        width: 0;
-        transition: width 1s;
-    }
-    
-    .accordion__list:hover input[type='radio']:checked + label .minus {
-        width: 6%;
-        transition: width 1s;
-    }
-    
     .accordion__list:hover input[type='radio']:checked + label .plus {
         width: 0;
         transition: width 1s;
@@ -321,5 +306,20 @@ span {
     .accordion__list:hover input[type='radio']:checked + label .plus {
         width: 0;
         transition: width 1s;
+}
+
+    .accordion__list:hover input[type='radio']:checked + label .minus {
+    width: 6%;
+    transition: width 1s;
+}
+
+.accordion__list:hover input[type='radio']:checked + label .plus {
+    width: 0;
+    transition: width 1s;
+}
+
+.accordion__list:hover input[type='radio'] + label .plus {
+    width: 6%;
+    transition: width 1s;
 }
 }
